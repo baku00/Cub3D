@@ -6,11 +6,11 @@
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 21:02:59 by my_name_          #+#    #+#             */
-/*   Updated: 2023/03/11 01:11:04 by my_name_         ###   ########.fr       */
+/*   Updated: 2023/03/11 03:00:59 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "map.h"
+#include "checkers_map.h"
 
 int	check_map_name(char *map_name)
 {

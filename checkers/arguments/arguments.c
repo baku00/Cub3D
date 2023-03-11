@@ -6,11 +6,11 @@
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 02:03:57 by my_name_          #+#    #+#             */
-/*   Updated: 2023/03/10 21:07:01 by my_name_         ###   ########.fr       */
+/*   Updated: 2023/03/11 03:01:19 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "arguments.h"
+#include "checkers_arguments.h"
 
 int	check_number_arguments(int argc)
 {

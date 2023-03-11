@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   map.h                                              :+:      :+:    :+:   */
+/*   types_map.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 01:14:27 by my_name_          #+#    #+#             */
-/*   Updated: 2023/03/11 02:43:52 by my_name_         ###   ########.fr       */
+/*   Updated: 2023/03/11 03:19:13 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,17 +48,16 @@ typedef struct s_player
 typedef struct s_element
 {
 	int		type;
-	void	*top;
-	void	*bottom;
-	void	*left;
-	void	*right;
 	void	*element;
 }	t_element;
 
 typedef struct s_map
 {
+	t_player	*player;
+	t_wall		*wall;
 	t_sky		*sky;
-	t_element	*element;
+	t_space		*space;
+	int			**cases;
 }	t_map;
 
 #endif

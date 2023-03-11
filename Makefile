@@ -4,6 +4,8 @@ SRC = main.c \
 	checkers/arguments/arguments.c \
 	checkers/map/map_name.c \
 	class/map/map.c \
+	class/element/element.c \
+	class/wall/wall.c \
 	get_next_line/get_next_line.c
 
 OBJS = $(SRC:.c=.o)

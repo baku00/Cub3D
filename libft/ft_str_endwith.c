@@ -6,7 +6,7 @@
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 22:05:55 by my_name_          #+#    #+#             */
-/*   Updated: 2023/03/11 01:03:37 by my_name_         ###   ########.fr       */
+/*   Updated: 2023/03/11 02:54:59 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,4 @@ int	ft_str_endwith(const char *str, const char *pattern)
 		str_length--;
 	}
 	return (1);
-	
-	
 }

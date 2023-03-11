@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   wall.h                                             :+:      :+:    :+:   */
+/*   class_element.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/11 02:17:13 by my_name_          #+#    #+#             */
-/*   Updated: 2023/03/11 02:20:13 by my_name_         ###   ########.fr       */
+/*   Created: 2023/03/11 02:16:21 by my_name_          #+#    #+#             */
+/*   Updated: 2023/03/11 03:32:03 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLASS_WALL_H
-# define CLASS_WALL_H
+#ifndef CLASS_ELEMENT_H
+# define CLASS_ELEMENT_H
 # include "../class.h"
 
-t_wall	*create_wall(char *north, char *south, char *west, char *east);
+void	*get_element_from_file(int type, char *map_name);
 #endif

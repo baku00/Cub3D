@@ -6,7 +6,7 @@
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 16:34:33 by dgloriod          #+#    #+#             */
-/*   Updated: 2023/03/11 01:47:27 by my_name_         ###   ########.fr       */
+/*   Updated: 2023/03/11 03:42:06 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ static char	*ft_join(char *result, char buf[2])
 	char	*temp;
 
 	temp = ft_strjoin(result, buf);
+	free(result);
 	result = ft_strdup(temp);
 	free(temp);
 	return (result);

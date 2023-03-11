@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   arguments.h                                        :+:      :+:    :+:   */
+/*   map.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/10 20:42:23 by my_name_          #+#    #+#             */
-/*   Updated: 2023/03/10 20:43:42 by my_name_         ###   ########.fr       */
+/*   Created: 2023/03/11 01:57:32 by my_name_          #+#    #+#             */
+/*   Updated: 2023/03/11 02:56:54 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ARGUMENTS_H
-# define ARGUMENTS_H
-# include "../checkers.h"
+#ifndef CLASS_MAP_H
+# define CLASS_MAP_H
+# include "../class.h"
 
-int	check_number_arguments(int argc);
-int	check_map_name(char *map_name);
-int	check_arguments(int argc, char **argv);
+t_map	*create_map(char *map_name);
+void	clear_map(t_map *map);
 #endif
