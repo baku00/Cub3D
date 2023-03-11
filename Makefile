@@ -6,6 +6,8 @@ SRC = main.c \
 	class/map/map.c \
 	class/element/element.c \
 	class/wall/wall.c \
+	class/sky/sky.c \
+	class/space/space.c \
 	get_next_line/get_next_line.c
 
 OBJS = $(SRC:.c=.o)

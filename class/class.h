@@ -6,7 +6,7 @@
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 01:37:54 by my_name_          #+#    #+#             */
-/*   Updated: 2023/03/11 02:58:04 by my_name_         ###   ########.fr       */
+/*   Updated: 2023/03/11 03:59:53 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,6 @@
 # include "./player/class_player.h"
 # include "./space/class_space.h"
 # include "./wall/class_wall.h"
+# include "./sky/class_sky.h"
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 01:14:27 by my_name_          #+#    #+#             */
-/*   Updated: 2023/03/11 03:19:13 by my_name_         ###   ########.fr       */
+/*   Updated: 2023/03/11 03:58:38 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # define WALL 20
 # define SPACE 30
 # define VOID 40
+# define SKY 50
 
 typedef struct s_wall
 {
