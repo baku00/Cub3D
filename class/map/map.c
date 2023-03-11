@@ -1,18 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   map.h                                              :+:      :+:    :+:   */
+/*   map.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/10 21:01:09 by my_name_          #+#    #+#             */
-/*   Updated: 2023/03/11 02:00:08 by my_name_         ###   ########.fr       */
+/*   Created: 2023/03/11 01:57:25 by my_name_          #+#    #+#             */
+/*   Updated: 2023/03/11 02:42:26 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHECKERS_MAP_H
-# define CHECKERS_MAP_H
-# include "../checkers.h"
+#include "map.h"
 
-int	check_map_name(char *map_name);
-#endif
+void	clear_map(t_map *map)
+{
+	free(map);
+}
+
+t_map	*create_map(char *map_name)
+{
+	t_map	*map;
+	void	*element;
+	int		fd;
+
+	map = ft_calloc(sizeof(t_map), 1);
+	if (!map)
+		return (NULL);
+	fd = open(map_name, O_RDONLY);
+	element = get_next_line(fd);
+	printf("Fd: %d\n", fd);
+	return (map);
+}

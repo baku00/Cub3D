@@ -3,8 +3,8 @@ NAME = Cub3D
 SRC = main.c \
 	checkers/arguments/arguments.c \
 	checkers/map/map_name.c \
-	get_next_line/get_next_line.c \
-	get_next_line/get_next_line_utils.c \
+	class/map/map.c \
+	get_next_line/get_next_line.c
 
 OBJS = $(SRC:.c=.o)
 

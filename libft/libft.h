@@ -6,7 +6,7 @@
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 16:46:05 by dgloriod          #+#    #+#             */
-/*   Updated: 2023/03/11 01:03:57 by my_name_         ###   ########.fr       */
+/*   Updated: 2023/03/11 02:41:06 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ char	*ft_strdup(const char *src);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 int		ft_str_endwith(const char *str, const char *pattern);
+int	ft_str_startwith(const char *str, const char *pattern);
 
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);

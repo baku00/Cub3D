@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dgloriod <marvin@42lausanne.ch>            +#+  +:+       +#+        */
+/*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 16:34:33 by dgloriod          #+#    #+#             */
-/*   Updated: 2021/11/12 16:36:27 by dgloriod         ###   ########.fr       */
+/*   Updated: 2023/03/11 01:47:27 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ static char	*ft_join(char *result, char buf[2])
 
 static void	ft_init(int *i, char buf[2])
 {
+	(void) i;
 	buf[1] = '\0';
 	i = 0;
 }

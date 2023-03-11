@@ -6,12 +6,13 @@
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 01:14:27 by my_name_          #+#    #+#             */
-/*   Updated: 2023/03/11 01:31:08 by my_name_         ###   ########.fr       */
+/*   Updated: 2023/03/11 02:43:52 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MAP_H
-# define MAP_H
+#ifndef TYPES_MAP_H
+# define TYPES_MAP_H
+# include "../class.h"
 # define PLAYER 10
 # define WALL 20
 # define SPACE 30
@@ -32,6 +33,13 @@ typedef struct s_space
 	int	blue;
 }	t_space;
 
+typedef struct s_sky
+{
+	int	red;
+	int	green;
+	int	blue;
+}	t_sky;
+
 typedef struct s_player
 {
 	int	direction;
@@ -40,21 +48,17 @@ typedef struct s_player
 typedef struct s_element
 {
 	int		type;
+	void	*top;
+	void	*bottom;
+	void	*left;
+	void	*right;
 	void	*element;
 }	t_element;
 
-typedef struct s_position
-{
-	t_position		*top;
-	t_position		*bottom;
-	t_position		*left;
-	t_position		*right;
-	t_element		*element;
-}	t_position;
-
 typedef struct s_map
 {
-	t_position	*position;
+	t_sky		*sky;
+	t_element	*element;
 }	t_map;
 
 #endif
