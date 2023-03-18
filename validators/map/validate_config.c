@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   validate_map.c                                     :+:      :+:    :+:   */
+/*   validate_config.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 21:02:59 by my_name_          #+#    #+#             */
-/*   Updated: 2023/03/18 16:10:33 by my_name_         ###   ########.fr       */
+/*   Updated: 2023/03/18 21:06:41 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	validate_chars(t_line *line)
 	return (!free_chars(chars));
 }
 
-int	validate_map(t_map *map)
+int	validate_config(t_map *map)
 {
 	if (!validate_chars(map->line))
 		return (0);

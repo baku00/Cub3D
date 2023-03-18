@@ -3,7 +3,8 @@ NAME = Cub3D
 SRC = main.c \
 	checkers/arguments/arguments.c \
 	checkers/map/map_name.c \
-	validators/map/validate_map.c \
+	validators/map/validate_config.c \
+	validators/map/validate_map_format.c \
 	validators/map/get.c \
 	validators/map/free.c \
 	getters/map/get_map.c \

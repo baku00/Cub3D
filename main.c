@@ -6,7 +6,7 @@
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 01:37:03 by my_name_          #+#    #+#             */
-/*   Updated: 2023/03/18 16:03:27 by my_name_         ###   ########.fr       */
+/*   Updated: 2023/03/18 20:36:36 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,19 +69,20 @@ void	print_points(t_config config, int **points)
 	int	j;
 
 	i = -1;
+	printf("Points\n");
 	while (++i < config.rows)
 	{
 		j = -1;
+		printf("(");
 		while (++j < config.cols)
-			printf("%d", points[i][j]);
-		printf("\n");
+			printf("%c", points[i][j]);
+		printf(")\n");
 	}
 }
 
 int	main(int argc, char **argv)
 {
 	t_map	*map;
-	int		**points;
 
 	if (!check_arguments(argc, argv))
 		return (print_error("Usage: ./Cub3D <map>.cub"));
@@ -98,9 +99,10 @@ int	main(int argc, char **argv)
 	print_floor(map->config);
 	print_crood(map->config);
 	print_line(map->line);
-	if (!validate_map(map))
+	if (!validate_config(map))
 		return (!clear_map(map));
-	points = get_map(map->config, map->line);
-	print_points(map->config, points);
+	map->points = get_map(map->config, map->line);
+	print_points(map->config, map->points);
+	printf("Validate map: %d\n", validate_map_format(map->config, map->points));
 	return (!!clear_map(map));
 }

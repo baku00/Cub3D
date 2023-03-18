@@ -1,51 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_map.c                                          :+:      :+:    :+:   */
+/*   validate_map_format.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 21:02:59 by my_name_          #+#    #+#             */
-/*   Updated: 2023/03/18 17:33:14 by my_name_         ###   ########.fr       */
+/*   Updated: 2023/03/18 21:06:21 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "getters_map.h"
+#include "validators_map.h"
 
-void	*free_map(int rows, int i, int **points)
+int	validate_char(int i, int j, int **points)
 {
-	while (i < rows)
+	if (points[i][j] == '0' || points[i][j] == 'S' || \
+		points[i][j] == 'N' || points[i][j] == 'W' || points[i][j] == 'E')
 	{
-		free(points[i]);
+		if ((points[i + 1][j] && points[i + 1][j] == ' ') || \
+			(points[i - 1][j] && points[i - 1][j] == ' ') || \
+			(points[i][j + 1] && points[i][j + 1] == ' ') || \
+			(points[i][j - 1] && points[i][j - 1] == ' '))
+			return (0);
 	}
-	free(points);
-	return (NULL);
+	return (1);
 }
 
-int	**get_map(t_config config, t_line *line)
+int	validate_map_format(t_config config, int **points)
 {
-	int	**points;
 	int	i;
 	int	j;
 
-	points = ft_calloc(sizeof(int *), config.rows);
-	if (!points)
-		return (NULL);
 	i = -1;
 	while (++i < config.rows)
 	{
-		points[i] = ft_calloc(sizeof(int), config.cols);
-		if (!points[i])
-			return (free_map(config.rows, i, points));
 		j = -1;
 		while (++j < config.cols)
 		{
-			if (j < line->length - 1)
-				points[i][j] = line->line[j];
-			else
-				points[i][j] = ' ';
+			if (!validate_char(i, j, points))
+				return (0);
 		}
-		line = line->next;
 	}
-	return (points);
+	return (1);
 }

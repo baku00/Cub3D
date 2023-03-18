@@ -6,7 +6,7 @@
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 20:40:25 by my_name_          #+#    #+#             */
-/*   Updated: 2023/03/17 21:47:43 by my_name_         ###   ########.fr       */
+/*   Updated: 2023/03/18 17:56:16 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ t_map	*init_map()
 	if (!map)
 		return (NULL);
 	map->line = NULL;
+	map->points = NULL;
 	return (map);
 }
 

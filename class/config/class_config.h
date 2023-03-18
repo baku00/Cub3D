@@ -6,7 +6,7 @@
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 20:03:15 by my_name_          #+#    #+#             */
-/*   Updated: 2023/03/17 18:44:00 by my_name_         ###   ########.fr       */
+/*   Updated: 2023/03/18 21:07:53 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define CLASS_CONFIG_H
 # include "../class.h"
 
-t_config	init_config();
+t_config	init_config(void);
 t_config	create_config(t_line *line);
 void		*clear_config(t_config *config);
 char		*get_texture(t_line *line, char *request);

@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   class_types.h                                      :+:      :+:    :+:   */
+/*   types.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 19:58:44 by my_name_          #+#    #+#             */
-/*   Updated: 2023/03/17 19:06:44 by my_name_         ###   ########.fr       */
+/*   Updated: 2023/03/18 17:55:58 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLASS_TYPES_H
-# define CLASS_TYPES_H
+#ifndef TYPES_H
+# define TYPES_H
 
 typedef struct s_config
 {
@@ -38,5 +38,6 @@ typedef struct s_map
 {
 	t_config	config;
 	t_line		*line;
+	int			**points;
 }	t_map;
 #endif

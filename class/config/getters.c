@@ -6,7 +6,7 @@
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 18:38:19 by my_name_          #+#    #+#             */
-/*   Updated: 2023/03/17 22:15:44 by my_name_         ###   ########.fr       */
+/*   Updated: 2023/03/18 21:08:06 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*get_texture(t_line *line, char *request)
 		if (line->next)
 			line = line->next;
 		else
-			break;
+			break ;
 	}
 	return (str);
 }
@@ -49,7 +49,7 @@ void	get_rgb(int (*rgb)[3], t_line *line, char *request)
 		if (line->next)
 			line = line->next;
 		else
-			break;
+			break ;
 	}
 	if (!line || !line->line)
 		return ;
@@ -93,8 +93,7 @@ int	get_cols(t_line *line)
 	}
 	if (line && line->length > cols)
 		cols = line->length;
-	printf("Cols: %d\n", cols);
-	return (cols);
+	return (cols - 1);
 }
 
 int	get_rows(t_line *line)
