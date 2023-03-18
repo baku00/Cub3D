@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   class.h                                            :+:      :+:    :+:   */
+/*   line.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/11 01:37:54 by my_name_          #+#    #+#             */
-/*   Updated: 2023/03/16 21:21:51 by my_name_         ###   ########.fr       */
+/*   Created: 2023/03/16 20:03:15 by my_name_          #+#    #+#             */
+/*   Updated: 2023/03/16 21:25:06 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLASS_H
-# define CLASS_H
-# include "../headers/headers.h"
-# include "./class_types.h"
-# include "./config/class_config.h"
-# include "./line/line.h"
-# include "./map/map.h"
+#ifndef LINE_H
+# define LINE_H
+# include "../class.h"
 
+t_line	*get_all_line(t_config *config, t_line *prev, int fd);
+t_line	*read_file(t_config *config, char *filename);
+void	*clear_line(t_line *line);
+void	*clear_all_line(t_line *line);
+t_line	*get_last_line(t_line *line);
 #endif

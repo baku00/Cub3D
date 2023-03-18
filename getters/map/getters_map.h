@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   class.h                                            :+:      :+:    :+:   */
+/*   getters_map.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/11 01:37:54 by my_name_          #+#    #+#             */
-/*   Updated: 2023/03/16 21:21:51 by my_name_         ###   ########.fr       */
+/*   Created: 2023/03/10 21:01:09 by my_name_          #+#    #+#             */
+/*   Updated: 2023/03/18 16:08:30 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLASS_H
-# define CLASS_H
-# include "../headers/headers.h"
-# include "./class_types.h"
-# include "./config/class_config.h"
-# include "./line/line.h"
-# include "./map/map.h"
+#ifndef GETTERS_MAP_H
+# define GETTERS_MAP_H
+# include "../getters.h"
 
+int	**get_map(t_config config, t_line *line);
 #endif

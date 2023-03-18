@@ -3,11 +3,18 @@ NAME = Cub3D
 SRC = main.c \
 	checkers/arguments/arguments.c \
 	checkers/map/map_name.c \
+	validators/map/validate_map.c \
+	validators/map/get.c \
+	validators/map/free.c \
+	getters/map/get_map.c \
+	class/config/config.c \
+	class/config/free.c \
+	class/config/getters.c \
+	class/line/line.c \
+	class/line/free.c \
+	class/line/navigate.c \
 	class/map/map.c \
-	class/element/element.c \
-	class/wall/wall.c \
-	class/sky/sky.c \
-	class/space/space.c \
+	class/map/free.c \
 	get_next_line/get_next_line.c
 
 OBJS = $(SRC:.c=.o)

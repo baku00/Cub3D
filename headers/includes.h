@@ -6,7 +6,7 @@
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 20:39:43 by my_name_          #+#    #+#             */
-/*   Updated: 2023/03/11 01:45:26 by my_name_         ###   ########.fr       */
+/*   Updated: 2023/03/18 15:22:13 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,7 @@
 # include "../libft/libft.h"
 # include "../get_next_line/get_next_line.h"
 # include "../checkers/checkers.h"
+# include "../validators/validators.h"
+# include "../getters/getters.h"
 
 #endif

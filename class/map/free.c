@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   map.h                                              :+:      :+:    :+:   */
+/*   free.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/11 01:57:32 by my_name_          #+#    #+#             */
-/*   Updated: 2023/03/11 02:56:54 by my_name_         ###   ########.fr       */
+/*   Created: 2023/03/16 20:03:02 by my_name_          #+#    #+#             */
+/*   Updated: 2023/03/17 18:46:01 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLASS_MAP_H
-# define CLASS_MAP_H
-# include "../class.h"
+#include "map.h"
 
-t_map	*create_map(char *map_name);
-void	clear_map(t_map *map);
-#endif
+void	*clear_map(t_map *map)
+{
+	clear_all_line(map->line);
+	clear_config(&map->config);
+	free(map);
+	return (NULL);
+}
