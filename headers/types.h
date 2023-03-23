@@ -6,7 +6,7 @@
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 19:58:44 by my_name_          #+#    #+#             */
-/*   Updated: 2023/03/18 17:55:58 by my_name_         ###   ########.fr       */
+/*   Updated: 2023/03/22 20:14:43 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct s_config
 	int		crood[3];
 	int		rows;
 	int		cols;
+	char	position;
 }	t_config;
 
 typedef struct s_line

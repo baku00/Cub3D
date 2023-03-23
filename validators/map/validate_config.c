@@ -6,7 +6,7 @@
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 21:02:59 by my_name_          #+#    #+#             */
-/*   Updated: 2023/03/18 21:06:41 by my_name_         ###   ########.fr       */
+/*   Updated: 2023/03/22 20:20:38 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,23 @@ int	validate_colors(int	rgb[3])
 int	validate_texture_path(char *path)
 {
 	return (ft_strlen(path) > 0);
+}
+
+int	validate_direction(int *chars)
+{
+	if (chars['S'] > 1 || chars['N'] > 1 || chars['E'] > 1 || chars['W'] > 1)
+		return (0);
+	else if (chars['S'] == 0 && chars['N'] == 0 && chars['E'] == 0 && chars['W'] == 0)
+		return (0);
+	if (chars['S'] == 1)
+		return (chars['N'] == 0 && chars['E'] == 0 && chars['W'] == 0);
+	else if (chars['N'] == 1)
+		return (chars['S'] == 0 && chars['E'] == 0 && chars['W'] == 0);
+	else if (chars['E'] == 1)
+		return (chars['S'] == 0 && chars['N'] == 0 && chars['W'] == 0);
+	else if (chars['W'] == 1)
+		return (chars['S'] == 0 && chars['N'] == 0 && chars['E'] == 0);
+	return (1);
 }
 
 int	validate_chars(t_line *line)
@@ -44,9 +61,7 @@ int	validate_chars(t_line *line)
 		else
 			break;
 	}
-	if (chars['S'] > 1 || chars['N'] > 1 || chars['E'] > 1 || chars['W'] > 1)
-		return (!!free_chars(chars));
-	else if (chars['S'] == 0 && chars['N'] == 0 && chars['E'] == 0 && chars['W'] == 0)
+	if (!validate_direction(chars))
 		return (!!free_chars(chars));
 	return (!free_chars(chars));
 }

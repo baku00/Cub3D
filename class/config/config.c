@@ -6,7 +6,7 @@
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 20:56:25 by my_name_          #+#    #+#             */
-/*   Updated: 2023/03/17 18:44:21 by my_name_         ###   ########.fr       */
+/*   Updated: 2023/03/20 20:59:44 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ t_config	init_config()
 	config.west = NULL;
 	config.north = NULL;
 	config.south = NULL;
+	config.position = 0;
 	return (config);
 }
 

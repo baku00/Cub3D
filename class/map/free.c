@@ -6,7 +6,7 @@
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 20:03:02 by my_name_          #+#    #+#             */
-/*   Updated: 2023/03/18 17:58:26 by my_name_         ###   ########.fr       */
+/*   Updated: 2023/03/22 20:31:40 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,13 @@
 void	*clear_all_points(t_config config, int **points)
 {
 	config.rows--;
-	while (config.rows >= 0)
+	while (points && config.rows >= 0)
 	{
 		free(points[config.rows]);
 		config.rows--;
 	}
-	free(points);
+	if (points)
+		free(points);
 	return (NULL);
 }
 

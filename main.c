@@ -6,7 +6,7 @@
 /*   By: my_name_ <my_name_@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/11 01:37:03 by my_name_          #+#    #+#             */
-/*   Updated: 2023/03/18 20:36:36 by my_name_         ###   ########.fr       */
+/*   Updated: 2023/03/22 20:29:59 by my_name_         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	print_crood(t_config config)
 
 void	print_line(t_line *line)
 {
-	printf("Line\n");
+	printf("Line (%p)\n", line);
 	while (line && line->line)
 	{
 		printf("(%s)\n", line->line);
@@ -75,7 +75,7 @@ void	print_points(t_config config, int **points)
 		j = -1;
 		printf("(");
 		while (++j < config.cols)
-			printf("%c", points[i][j]);
+			printf("%d", points[i][j]);
 		printf(")\n");
 	}
 }
